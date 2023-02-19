@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Shop</title>
+    <link rel="icon" href="Asset/Logo/catshop.png">
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Navbar Menu -->
+    <nav class="container        topnav" id="myTopnav">
+        <img src="Asset/Logo/catshop.png" alt="catshop" class="nav-logo">
+        <div class="home">Home</div>
+        <div class="profile">My Profile</div>
+        <div class="portofolio">Portofolio</div>
+        <div class="masage">Masage Us</div>
+        <div href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </div>
+    </nav>
+    <!-- Slideshow -->
+    <div class="container slide">
+        <h1 class="top-left">Welcome To The Cat Shop</h1>
+        <p class="top-left">All Cat Products Are Here</p>
+        <img class="mySlides" src="Asset/Slide/catslide1.png">
+        <img class="mySlides" src="Asset/Slide/catslide2.png">
+        <img class="mySlides" src="Asset/Slide/catslide3.png">
+    </div>
+    <!-- Product -->
+    <div class="container-product">
+        <h1>Poduct</h1>
+        <div class="container-gl">
+            <div class="row">
+                <div class="col-4">
+                    <img src="Asset/Img/cannedfood.png" alt="cannerdfood" width="200px">
+                    <p><Strong>Canner Food</Strong></p>
+                </div>
+                <div class="col-4">
+                    <img src="Asset/Img/catfood.png" alt="catfood" width="200px">
+                    <p><Strong>Cat Food</Strong></p>
+                </div>
+                <div class="col-4">
+                    <img src="Asset/Img/sleepcat.png" alt="sleepcat" width="200px">
+                    <p><Strong>Sleep Cat</Strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Message Us -->
+    <div class="container-us">
+        <h1>Message Us</h1>
+        <div class="container-flex">
+            <div class="container-flex-form">
+                <form name="data" action="/action_page.php">
+                    <div class="row">
+                    <div class="col-25">
+                        <label for="fname">Name</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="text" id="fname" name="name" placeholder="Your name..">
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-25">
+                        <label for="ldate">Date Of Birth</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="date" id="ldate" name="date" placeholder="Your last name..">
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-25">
+                        <label for="country">Gender</label>
+                    </div>
+                    <div class="col-75">
+                        <input type="radio" name="gender" id="Man" value="Man">Man
+                        <input type="radio" name="gender" id="Women" value="Women">Woman
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-25">
+                        <label for="message">Message</label>
+                    </div>
+                    <div class="col-75">
+                        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <button type="button" onClick='inputdata()' class="btn btn-success">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="container-flex-table">
+                <table class="table">
+                    <tr>
+                        <th>Current Date and Time is</th>
+                        <td>:</td>
+                        <td><span id='date-time'></span>.</td>
+                    </tr>
+                </table>
+                <div class="container-flex-table-content">
+                    <table class="table">
+                        <tr>
+                            <th scope="col">Nama</th>
+                            <td>:</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Date</th>
+                            <td>:</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Gender</th>
+                            <td>:</td>
+                        </tr>
+                        <tr>
+                            <th scope="col">Message</th>
+                            <td>:</td>
+                        </tr>
+                    </table>
+                    <table class="table" id="databel">
+                    <thead>
+                        <tr>
+
+                        </tr>
+                    </thead>
+                    </table>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="container">
+        <footer>
+            <p>Creator By Juni</p>
+        </footer>
+    </div>
+    <!-- JS -->
+    <!-- JS SlideShow -->
+    <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+          }
+          myIndex++;
+          if (myIndex > x.length) {myIndex = 1}
+          x[myIndex-1].style.display = "block";
+          setTimeout(carousel, 2000); // Change image every 2 seconds
+        }
+    </script>
+    <!-- JS Responsive Menu -->
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+    </script>
+    <!-- Current Time -->
+    <script>
+        var dt = new Date();
+        document.getElementById('date-time').innerHTML=dt;
+    </script>
+    <!-- Save Message -->
+    <script >
+        function inputdata(){
+        var n=document.forms['data']['name'].value;
+        var e=document.forms['data']['date'].value;
+        var p=document.forms['data']['gender'].value;
+        var a=document.forms['data']['message'].value;
+
+        var tabel = document.getElementById("databel");
+        var baris = tabel.insertRow(1);
+        var kol1 = baris.insertCell(0);
+        var tabel1 = document.getElementById("databel");
+        var baris = tabel1.insertRow(2);
+        var kol2 = baris.insertCell(0);
+        var tabel2 = document.getElementById("databel");
+        var baris = tabel2.insertRow(3);
+        var kol3 = baris.insertCell(0);
+        var tabel3 = document.getElementById("databel");
+        var baris = tabel3.insertRow(4);
+        var kol4 = baris.insertCell(0);
+
+        kol1.innerHTML = n;
+        kol2.innerHTML = e;
+        kol3.innerHTML = p;
+        kol4.innerHTML = a;
+      }
+      </script>
+</body>
+</html>
