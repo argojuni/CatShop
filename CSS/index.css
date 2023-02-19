@@ -163,7 +163,7 @@
     width: 100%;
   }
   
-  input[type=submit]:hover {
+  button:hover {
     background-color: #45a049;
   }
   
@@ -212,7 +212,7 @@
 
   .table th{
     padding: 10px;
-    text-align: justify;
+    float: left;
   }
 
   .container>footer{
