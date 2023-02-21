@@ -10,170 +10,250 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <!-- Navbar Menu -->
-    <nav class="container topnav" id="myTopnav">
-        <img src="Asset/Logo/catshop.png" alt="catshop" class="nav-logo">
-        <div class="home"><a href="index.html">Home</a></div>
-        <div class="profile"><a href="Menu/profile.html"> Our Profile</a></div>
-        <div class="portofolio">Portofolio</div>
-        <div class="masage">Masage Us</div>
-        <div href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
+    <!-- Header -->
+    <div class="header" id="myTopnav">
+        <div class="fixed-template">
+            <img src="Asset/Logo/catshop.png" alt="cats" width="50px" class="logo-img"><a class="logo">Cat Shop</a>
+            <div class="header-right">
+                <a class="active" href="#home">Home</a>
+                <a href="#contact">Our Profile</a>
+                <a href="#about">Portofolio</a>
+                <a href="#about">Message Us</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
-    </nav>
-    <!-- Slideshow -->
-    <div class="container slide">
-        <h1 class="top-left">Hi <span id="namew"></span>,Welcome To The Cat Shop</h1>
-        <p class="top-left">All Cat Products Are Here</p>
-        <img class="mySlides" src="Asset/Slide/catslide1.png">
-        <img class="mySlides" src="Asset/Slide/catslide2.png">
-        <img class="mySlides" src="Asset/Slide/catslide3.png">
     </div>
-    <!-- Product -->
-    <div class="container-product">
-        <h1>Poduct</h1>
-        <div class="container-gl">
-            <div class="row">
-                <div class="col-4">
-                    <img class="container-gl-img" src="Asset/Img/cannedfood.png" alt="cannerdfood" width="200px">
-                    <p><Strong>Canner Food</Strong></p>
+
+      <!-- Slide Show -->
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+        <div class="numbertext">
+            <h1>Hi <span id="namew"></span>,Welcome To The Cat Shop</h1>
+        </div>
+        <img src="Asset/Slide/catslide1.png" style="width:100%">
+        <div class="text">Product 1</div>
+        </div>
+        
+        <div class="mySlides fade">
+        <div class="numbertext">
+            <h1>Hi <span id="namex"></span>,Welcome To The Cat Shop</h1>
+        </div>
+        <img src="Asset/Slide/catslide2.png" style="width:100%">
+        <div class="text">Product 2</div>
+        </div>
+        
+        <div class="mySlides fade">
+        <div class="numbertext">
+            <h1>Hi <span id="namez"></span>,Welcome To The Cat Shop</h1>
+        </div>
+        <img src="Asset/Slide/catslide3.png" style="width:100%">
+        <div class="text">Product 3</div>
+        </div>
+        
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+<!-- Galery -->
+    <div class="fixed-template">
+        <div class="header-galery">
+            <h1>Galery Product</h1>
+        </div>
+<!-- Photo Grid -->
+        <div class="row"> 
+            <div class="column">
+                <div class="container-image-overlay">
+                    <img src="Asset/Img/cannedfood.png" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                    <div class="text-image-overlay">Canned Food</div>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <img class="container-gl-img" src="Asset/Img/catfood.png" alt="catfood" width="200px">
-                    <p><Strong>Cat Food</Strong></p>
+            </div>
+            <div class="column">
+                <div class="container-image-overlay">
+                    <img src="Asset/Img/catfood.png" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                    <div class="text-image-overlay">Cat Food</div>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <img class="container-gl-img" src="Asset/Img/sleepcat.png" alt="sleepcat" width="200px">
-                    <p><Strong>Sleep Cat</Strong></p>
+            </div>  
+            <div class="column">
+                <div class="container-image-overlay">
+                    <img src="Asset/Img/sleepcat.png" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                    <div class="text-image-overlay">Sleep Cat</div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="container-image-overlay">
+                    <img src="Asset/Img/sleepcat2.png" alt="Avatar" class="image" style="width:100%">
+                    <div class="middle">
+                    <div class="text-image-overlay">Sleep Cat</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Message Us -->
-    <div class="container-us">
-        <h1>Message Us</h1>
-        <div class="container-flex">
-            <div class="container-flex-form">
-                <form name="message-form" onsubmit="return validateForm()">
-                    <div class="row">
+<!-- Messages -->
+    <div class="fixed-template">
+        <div class="header-galery">
+            <h1>Message Us</h1>
+        </div>
+        <div class="row">
+            <div class="column-form">
+                <form name="message-form" onsubmit="return validateForm()" action="/action_page.php">
+                <div class="row-form">
                     <div class="col-25">
-                        <label for="fname">Name</label>
+                    <label for="fname"> <b> Name </b></label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="Nama" name="full-name" placeholder="Your name..">
+                    <input type="text" id="fname" name="full-name" placeholder="Your name..">
                     </div>
-                    </div>
-                    <div class="row">
+                </div>
+                <div class="row-form">
                     <div class="col-25">
-                        <label for="ldate">Date Of Birth</label>
+                    <label for="ldate"> <b> Date Of Birth </b></label>
                     </div>
                     <div class="col-75">
-                        <input type="date" id="date" name="birth-date" placeholder="dd-mm-yyyy" value="dd-mm-yyyy">
+                    <input type="date" id="date" name="birth-date" placeholder="Your last name..">
                     </div>
-                    </div>
-                    <div class="row">
+                </div>
+                <div class="row-form">
                     <div class="col-25">
-                        <label for="country">Gender</label>
+                    <label for="country"> <b> Gender </b></label>
                     </div>
                     <div class="col-75">
-                        <input type="radio" name="gender" id="male" value="Man">Man
-                        <input type="radio" name="gender" id="female" value="Women">Woman
+                    <input type="radio" name="gender" id="male" value="Man">Man
+                    <input type="radio" name="gender" id="female" value="Woman">Woman
                     </div>
-                    </div>
-                    <div class="row">
+                </div>
+                <div class="row-form">
                     <div class="col-25">
-                        <label for="message">Message</label>
+                    <label for="message"> <b> Message </b></label>
                     </div>
                     <div class="col-75">
-                        <textarea id="message" name="messages" placeholder="Write something.." style="height:200px"></textarea>
+                    <textarea id="message" name="messages" placeholder="Write something.." style="height:200px"></textarea>
                     </div>
-                    </div>
-                    <div class="row">
-                        <input type="submit" value="Submit">
-                    </div>
+                </div>
+                <div class="row-form">
+                    <input type="submit" value="Submit">
+                </div>
                 </form>
             </div>
-            <div class="container-flex-table">
-                <table class="table">
-                    <tr>
-                        <th>Current Date and Time is</th>
-                        <td>:</td>
-                        <td><span id='date-time'></span>.</td>
-                    </tr>
-                </table>
-                <div class="container-flex-table-content">
-                    <table class="table">
-                        <tr>
-                            <th scope="col">Nama</th>
-                            <td>:</td>
-                            <td><span id="sender-full-name"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Date</th>
-                            <td>:</td>
-                            <td><span id="sender-birth-date"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Gender</th>
-                            <td>:</td>
-                            <td><span id="sender-gender"></span></td>
-                        </tr>
-                        <tr>
-                            <th scope="col">Message</th>
-                            <td>:</td>
-                            <td><span id="sender-messages"></span></td>
-                        </tr>
-                    </table>
-                </div>
-              </div>
+            <div class="column-form">
+                <ul id="myUL">
+                    <div class="row-form">
+                        <div class="col-25">
+                            <li><span><b> Curent Time </b></span></li>
+                        </div>
+                        <div class="col-75">
+                            <li><span id="date-time"></span></li>
+                        </div>
+                    </div>
+                    <div class="row-form">
+                        <div class="col-25">
+                            <li><span><b> Name </b></span></li>
+                        </div>
+                        <div class="col-75">
+                            <li><span id="sender-full-name">...</span></li>
+                        </div>
+                    </div>
+                    <div class="row-form">
+                        <div class="col-25">
+                            <li><span><b> Birth </b></span></li>
+                        </div>
+                        <div class="col-75">
+                            <li><span id="sender-birth-date">...</span></li>
+                        </div>
+                    </div>
+                    <div class="row-form">
+                        <div class="col-25">
+                            <li><span><b> Gender </b></span></li>
+                        </div>
+                        <div class="col-75">
+                            <li><span id="sender-gender">...</span></li>
+                        </div>
+                    </div>
+                    <div class="row-form">
+                        <div class="col-25">
+                            <li><span><b> Messages </b></span></li>
+                        </div>
+                        <div class="col-75">
+                            <li><span id="sender-messages">...</span></li>
+                        </div>
+                    </div>
+                  </ul>
+            </div>
         </div>
     </div>
-    <!-- Footer -->
-    <div class="container">
-        <footer>
-            <p>Creator By Juni</p>
-        </footer>
-    </div>
-    <!-- JS -->
-    <!-- JS SlideShow -->
-    <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-          var i;
-          var x = document.getElementsByClassName("mySlides");
-          for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-          }
-          myIndex++;
-          if (myIndex > x.length) {myIndex = 1}
-          x[myIndex-1].style.display = "block";
-          setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
+</body>
+<!-- JS -->
+<!-- Responsive Navbar -->
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "header") {
+        x.className += " responsive";
+      } else {
+        x.className = "header";
+      }
+    }
+</script>
+<!-- Welcome -->
+<script>
+    var namew = prompt("Input Your Name");
+    document.getElementById("namew").innerText = namew;
+    document.getElementById("namex").innerText = namew;
+    document.getElementById("namez").innerText = namew;
+</script>
+<!-- SlideShow -->
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
     </script>
-    <!-- JS Responsive Menu -->
-    <!-- Welcome -->
-    <!-- <script>
-        var name = prompt("Input Your Name");
-        document.getElementById("namew").innerText = name;
-    </script> -->
-    <!-- <script>
-        function myFunction() {
-          var x = document.getElementById("myTopnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-    </script> -->
-    <!-- Current Time -->
+
+<!-- Current Time -->
     <script>
         var dt = new Date();
         document.getElementById('date-time').innerHTML=dt;
     </script>
-    <!-- Save Message -->
+
+<!-- Save Message -->
     <script >
         function validateForm(){
             var name = document.forms["message-form"]["full-name"].value;
@@ -192,6 +272,5 @@
             document.getElementById("sender-messages").innerHTML = messages;
             return false;
         }
-      </script>
-</body>
+    </script>
 </html>
