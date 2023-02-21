@@ -23,7 +23,7 @@
     </nav>
     <!-- Slideshow -->
     <div class="container slide">
-        <h1 class="top-left">Welcome To The Cat Shop</h1>
+        <h1 class="top-left">Hi <span id="namew"></span>,Welcome To The Cat Shop</h1>
         <p class="top-left">All Cat Products Are Here</p>
         <img class="mySlides" src="Asset/Slide/catslide1.png">
         <img class="mySlides" src="Asset/Slide/catslide2.png">
@@ -35,15 +35,15 @@
         <div class="container-gl">
             <div class="row">
                 <div class="col-4">
-                    <img src="Asset/Img/cannedfood.png" alt="cannerdfood" width="200px">
+                    <img class="container-gl-img" src="Asset/Img/cannedfood.png" alt="cannerdfood" width="200px">
                     <p><Strong>Canner Food</Strong></p>
                 </div>
                 <div class="col-4">
-                    <img src="Asset/Img/catfood.png" alt="catfood" width="200px">
+                    <img class="container-gl-img" src="Asset/Img/catfood.png" alt="catfood" width="200px">
                     <p><Strong>Cat Food</Strong></p>
                 </div>
                 <div class="col-4">
-                    <img src="Asset/Img/sleepcat.png" alt="sleepcat" width="200px">
+                    <img class="container-gl-img" src="Asset/Img/sleepcat.png" alt="sleepcat" width="200px">
                     <p><Strong>Sleep Cat</Strong></p>
                 </div>
             </div>
@@ -54,13 +54,13 @@
         <h1>Message Us</h1>
         <div class="container-flex">
             <div class="container-flex-form">
-                <form name="data" action="/action_page.php">
+                <form name="message-form" onsubmit="return validateForm()">
                     <div class="row">
                     <div class="col-25">
                         <label for="fname">Name</label>
                     </div>
                     <div class="col-75">
-                        <input type="text" id="fname" name="name" placeholder="Your name..">
+                        <input type="text" id="Nama" name="full-name" placeholder="Your name..">
                     </div>
                     </div>
                     <div class="row">
@@ -68,7 +68,7 @@
                         <label for="ldate">Date Of Birth</label>
                     </div>
                     <div class="col-75">
-                        <input type="date" id="date" name="date" placeholder="dd-mm-yyyy" value="dd-mm-yyyy">
+                        <input type="date" id="date" name="birth-date" placeholder="dd-mm-yyyy" value="dd-mm-yyyy">
                     </div>
                     </div>
                     <div class="row">
@@ -76,8 +76,8 @@
                         <label for="country">Gender</label>
                     </div>
                     <div class="col-75">
-                        <input type="radio" name="gender" id="Man" value="Man">Man
-                        <input type="radio" name="gender" id="Women" value="Women">Woman
+                        <input type="radio" name="gender" id="male" value="Man">Man
+                        <input type="radio" name="gender" id="female" value="Women">Woman
                     </div>
                     </div>
                     <div class="row">
@@ -85,11 +85,11 @@
                         <label for="message">Message</label>
                     </div>
                     <div class="col-75">
-                        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                        <textarea id="message" name="messages" placeholder="Write something.." style="height:200px"></textarea>
                     </div>
                     </div>
                     <div class="row">
-                        <button type="button" onClick='inputdata()' class="btn btn-success">Submit</button>
+                        <input type="submit" value="Submit">
                     </div>
                 </form>
             </div>
@@ -106,26 +106,23 @@
                         <tr>
                             <th scope="col">Nama</th>
                             <td>:</td>
+                            <td><span id="sender-full-name"></span></td>
                         </tr>
                         <tr>
                             <th scope="col">Date</th>
                             <td>:</td>
+                            <td><span id="sender-birth-date"></span></td>
                         </tr>
                         <tr>
                             <th scope="col">Gender</th>
                             <td>:</td>
+                            <td><span id="sender-gender"></span></td>
                         </tr>
                         <tr>
                             <th scope="col">Message</th>
                             <td>:</td>
+                            <td><span id="sender-messages"></span></td>
                         </tr>
-                    </table>
-                    <table class="table" id="databel">
-                    <thead>
-                        <tr>
-
-                        </tr>
-                    </thead>
                     </table>
                 </div>
               </div>
@@ -156,6 +153,11 @@
         }
     </script>
     <!-- JS Responsive Menu -->
+    <!-- Welcome -->
+    <!-- <script>
+        var name = prompt("Input Your Name");
+        document.getElementById("namew").innerText = name;
+    </script> -->
     <!-- <script>
         function myFunction() {
           var x = document.getElementById("myTopnav");
@@ -173,30 +175,23 @@
     </script>
     <!-- Save Message -->
     <script >
-        function inputdata(){
-        var n=document.forms['data']['name'].value;
-        var e=document.forms['data']['date'].value;
-        var p=document.forms['data']['gender'].value;
-        var a=document.forms['data']['message'].value;
+        function validateForm(){
+            var name = document.forms["message-form"]["full-name"].value;
+            var birthDate = document.forms["message-form"]["birth-date"].value;
+            var gender = document.forms["message-form"]["gender"].value;
+            var messages = document.forms["message-form"]["messages"].value;
 
-        var tabel = document.getElementById("databel");
-        var baris = tabel.insertRow(1);
-        var kol1 = baris.insertCell(0);
-        var tabel1 = document.getElementById("databel");
-        var baris = tabel1.insertRow(2);
-        var kol2 = baris.insertCell(0);
-        var tabel2 = document.getElementById("databel");
-        var baris = tabel2.insertRow(3);
-        var kol3 = baris.insertCell(0);
-        var tabel3 = document.getElementById("databel");
-        var baris = tabel3.insertRow(4);
-        var kol4 = baris.insertCell(0);
-
-        kol1.innerHTML = n;
-        kol2.innerHTML = e;
-        kol3.innerHTML = p;
-        kol4.innerHTML = a;
-      }
+            if(name == "" || birthDate == "" || gender == "" || messages == ""){
+                alert("Tidak boleh ada yang kosong");
+                return false;
+            }
+            
+            document.getElementById("sender-gender").innerHTML = gender;
+            document.getElementById("sender-full-name").innerHTML = name;
+            document.getElementById("sender-birth-date").innerHTML = birthDate;
+            document.getElementById("sender-messages").innerHTML = messages;
+            return false;
+        }
       </script>
 </body>
 </html>

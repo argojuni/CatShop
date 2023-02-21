@@ -113,6 +113,10 @@
     justify-content: center;
   }
 
+ .container-gl-img{
+  border-radius: 50%;
+ }
+
   .container-us{
     border-bottom: 1px solid black;
     border-top: 1px solid black;
@@ -152,7 +156,7 @@
     width: 100%;
   }
   
-  button {
+  input[type=submit] {
     background-color: #04AA6D;
     color: white;
     padding: 12px 20px;
@@ -163,7 +167,7 @@
     width: 100%;
   }
   
-  button:hover {
+  input[type=submit]:hover {
     background-color: #45a049;
   }
   
@@ -197,6 +201,12 @@
     .col-25, .col-75, input[type=submit] {
       width: 100%;
       margin-top: 0;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    .container-gl{
+      display: block;
     }
   }
 
