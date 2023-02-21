@@ -11,10 +11,10 @@
 </head>
 <body>
     <!-- Navbar Menu -->
-    <nav class="container        topnav" id="myTopnav">
+    <nav class="container topnav" id="myTopnav">
         <img src="Asset/Logo/catshop.png" alt="catshop" class="nav-logo">
-        <div class="home">Home</div>
-        <div class="profile">Our Profile</div>
+        <div class="home"><a href="index.html">Home</a></div>
+        <div class="profile"><a href="Menu/profile.html"> Our Profile</a></div>
         <div class="portofolio">Portofolio</div>
         <div class="masage">Masage Us</div>
         <div href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -185,7 +185,7 @@
                 alert("Tidak boleh ada yang kosong");
                 return false;
             }
-            
+
             document.getElementById("sender-gender").innerHTML = gender;
             document.getElementById("sender-full-name").innerHTML = name;
             document.getElementById("sender-birth-date").innerHTML = birthDate;

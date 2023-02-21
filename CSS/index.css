@@ -49,6 +49,15 @@
     display: none;
   }
 
+  a{
+    text-decoration: none;
+    color: #f2f2f2;
+  }
+
+  a:hover{
+    background-color: #ddd;
+    color: black;   
+  }
   /* @media screen and (max-width: 1000px) {
     .topnav div:not(:first-child) {display: none;}
     .topnav div.icon {
