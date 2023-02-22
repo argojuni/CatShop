@@ -10,44 +10,61 @@
     <link rel="stylesheet" href="/CSS/profile.css">
 </head>
 <body>
-    <!-- Navbar Menu -->
-    <nav class="container topnav" id="myTopnav">
-        <img src="/Asset/Logo/catshop.png" alt="catshop" class="nav-logo">
-        <div class="home"><a href="/index.html">Home</a></div>
-        <div class="profile"><a href="profile.html"> Our Profile</a></div>
-        <div class="portofolio">Portofolio</div>
-        <div class="masage">Masage Us</div>
-        <div href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </div>
-    </nav>
-    <!-- Profile -->
-    <header class="header">
-        <h1>Profile</h1>
-    </header>
-    <div class="container-profile">
-        <img src="/Asset/Profile/DSC_0163.jpg" alt="" width="200px">
-        <div class="container-profile-data">
-            <p>Nama</p>
-            <p>Tanggal Lahir</p>
-            <p>Jenis Kelamin</p>
-            <p>Agama</p>
-            <p>No HP</p>
-        </div>
-        <div class="container-profile-data">
-            <p>:</p>
-            <p>:</p>
-            <p>:</p>
-            <p>:</p>
-            <p>:</p>
-        </div>
-        <div class="container-profile-value">
-            <p>Juniargo Ponco Risma Wirandi</p>
-            <p>Blitar, 19 Juni 1999</p>
-            <p>Laki-laki</p>
-            <p>Islam</p>
-            <p>082228825906</p>
+    <!-- Header -->
+    <div class="header" id="myTopnav">
+        <div class="fixed-template">
+            <img src="/Asset/Logo/catshop.png" alt="cats" width="50px" class="logo-img"><a class="logo">Pet Shop</a>
+            <div class="header-right">
+                <a href="/index.html">Home</a>
+                <a class="active" href="#contact">Our Profile</a>
+                <a href="#about">Portofolio</a>
+                <a href="#messages-page">Message Us</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
         </div>
     </div>
+
+<!-- Profile -->
+    <aside class="profile-card">
+        <header>
+        <!-- here’s the avatar -->
+        <a target="_blank" href="#">
+            <img src="/Asset/Logo/catshop.png" class="hoverZoomLink">
+        </a>
+    
+        <!-- the username -->
+        <h1>
+                Pet Shop
+                </h1>
+    
+        <!-- and role or location -->
+        <h2>
+                All Pet Needs
+                </h2>
+    
+        </header>
+    
+        <!-- bit of a bio; who are you? -->
+        <div class="profile-bio">
+    
+        <p>
+            <b>Vision</b>
+        </p>
+        <p>
+            Become a forum and place for sharing and information for animal lovers
+        </p>
+        <p>
+            <b>mission</b>
+        </p>
+        <p>
+            Provide food, salon, cages for pets.
+        </p>
+    
+        </div>
+    </aside>
 </body>
+<!-- JS -->
+<!-- Profile -->
 </html>

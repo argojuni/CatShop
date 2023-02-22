@@ -383,3 +383,7 @@ input[type=submit]:hover {
 #myUL li span:hover:not(.header) {
   background-color: #eee;
 }
+
+footer{
+  padding: 20px;
+}
