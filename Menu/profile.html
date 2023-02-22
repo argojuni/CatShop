@@ -8,6 +8,7 @@
     <link rel="icon" href="/Asset/Logo/catshop.png">
     <link rel="stylesheet" href="/CSS/index.css">
     <link rel="stylesheet" href="/CSS/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- Header -->
@@ -27,44 +28,90 @@
     </div>
 
 <!-- Profile -->
-    <aside class="profile-card">
-        <header>
-        <!-- here’s the avatar -->
-        <a target="_blank" href="#">
-            <img src="/Asset/Logo/catshop.png" class="hoverZoomLink">
-        </a>
-    
-        <!-- the username -->
-        <h1>
-                Pet Shop
-                </h1>
-    
-        <!-- and role or location -->
-        <h2>
-                All Pet Needs
-                </h2>
-    
-        </header>
-    
-        <!-- bit of a bio; who are you? -->
-        <div class="profile-bio">
-    
-        <p>
-            <b>Vision</b>
-        </p>
-        <p>
-            Become a forum and place for sharing and information for animal lovers
-        </p>
-        <p>
-            <b>mission</b>
-        </p>
-        <p>
-            Provide food, salon, cages for pets.
-        </p>
-    
+<div class="fixed-template">
+    <div class="header-galery">
+        <h1>Company</h1>
+    </div>
+<!-- Photo Grid -->
+    <div class="row"> 
+        <div class="column">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Asset/Logo/catshopS1.png" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Company</h1> 
+                    <p>Pet Shop berdiri sejak 2008 terletak di kemang village, jakarta selatan dan kini memiliki 2 cabang yaitu di depok dan jakarta pusat.</p> 
+                  </div>
+                </div>
+            </div>
         </div>
-    </aside>
+        <div class="column">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Asset/Logo/catshopS2.png" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Vision</h1> 
+                    <p>Menjadi wadah dan tempat berbagi dan informasi untuk pecinta hewan pada umumnya dan masyarakat Kota depok dan kemang dalam kaitannya dengan dunia hewan peliharaan.</p> 
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Asset/Logo/catshopS3.png" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Mision</h1> 
+                    <p>Memberikan makanan,salon,kandang untuk hewan peliharaan .
+                        Mengadakan kegiatan-kegiatan yang dapat merangsang tumbuhnya kecintaan dan kepedulian masyarakat terhadap hewan, baik hewan  ras maupun hewan domestik domestik.
+                        Memberikan fasilitas yang dapat memudahkan pecinta hewan untuk dapat dengan mudah mendapatkan informasi – informasi seputar hewan peliharaan.</p> 
+                  </div>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="/Asset/Logo/catshopS4.png" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Intragram</h1>
+                    <p><a href="https://www.instagram.com/petshopid/?hl=id" style="text-decoration: none;">Click</a></p>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+    <div class="header-profile">
+        <div class="footer-flex-profile">
+            <div class="header-right">
+                <footer>
+                    Cretar By @Juniargo
+                </footer>
+            </div>
+        </div>
+    </div>
 </body>
 <!-- JS -->
+<!-- Responsive Navbar -->
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "header") {
+        x.className += " responsive";
+      } else {
+        x.className = "header";
+      }
+    }
+</script>
 <!-- Profile -->
 </html>
